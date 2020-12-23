@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Carousel from "../components/Carousel/Carousel";
+import React from "react";
+import RegionHolder from "../components/RegionHolder/RegionHolder";
 
 function GenPage() {
 
     return (
 
         <>
-            <Carousel></Carousel>
+            <RegionHolder></RegionHolder>
         </>
     )
 
