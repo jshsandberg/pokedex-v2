@@ -18,28 +18,43 @@ function Galar() {
                     url: 'https://pokeapi.co/api/v2/pokedex/kanto/',
                 });
                 const { pokemon_entries } = response.data;
-
-                const urlPokemon = []
                 
-                await pokemon_entries.forEach(async(value) => {
-                    await urlPokemon.push(value.pokemon_species.url)
-                });
+                const galarPokemon = [];
 
-                const finalData = []
-            
-                const secondResponse = urlPokemon.map(async(item) => {
-                    const res = await axios.get(item);
-                    const urlResponse = res.data.varieties[0].pokemon.url;
-                        const resData = await axios.get(urlResponse);
-                        const { data } = resData;
-                        await finalData.push(data);
-                        console.log(finalData)
-                        if (finalData.length === 150) {
-                            setPokemon(finalData);
-                        }
+                for (let i = 0; i < pokemon_entries.length; i++) {
 
-                        
-                });       
+                    const response = await axios.get(pokemon_entries[i].pokemon_species.url);
+
+                    const pokemonResponse = await axios.get(response.data.varieties[0].pokemon.url);
+
+                    let skeletonPokemon = {
+                        name: pokemon_entries[i].pokemon_species.name,
+                        id: response.data.id.toString().length === 3 ? response.data.id : response.data.id.toString().length === 2 ? "0" + response.data.id : "00" + response.data.id,
+                        description: response.data.flavor_text_entries[16],
+                        stats: {
+                                    hp: pokemonResponse.data.stats[0].base_stat,
+                                    atk: pokemonResponse.data.stats[1].base_stat,
+                                    def: pokemonResponse.data.stats[2].base_stat,
+                                    spa: pokemonResponse.data.stats[3].base_stat,
+                                    spd: pokemonResponse.data.stats[4].base_stat,
+                                    spe: pokemonResponse.data.stats[5].base_stat,
+                                },
+                        type: {
+                                type1: pokemonResponse.data.types[0].type.name,
+                                type2: pokemonResponse.data.types.length === 2 ? pokemonResponse.data.types[1].type.name : "NA"                              
+                            }
+                    }
+
+                    galarPokemon.push(skeletonPokemon)
+                    
+                }
+
+              
+
+
+                setPokemon(galarPokemon)
+
+              
          
             } catch (err) {
                 console.log(err)
@@ -51,6 +66,7 @@ function Galar() {
    const background = {
        backgroundImage: `url(${Background})`
    }
+
   
    
 
@@ -59,13 +75,11 @@ function Galar() {
         <>
             <div style={ background }>
 
-        <img src="https://img.pokemondb.net/sprites/x-y/normal/pikachu.png" alt="Bulbasaur"></img>
-
    {pokemon && pokemon.map((galar, i) => {
             return (
                 <>
                 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`https://img.pokemondb.net/sprites/home/normal/${galar.species.name}.png`}/>
+      <Card.Img variant="top" src={`https://www.serebii.net/swordshield/pokemon/${galar.id}.png`}/>
           <Card.Body>
               <Card.Title>Card Title</Card.Title>
                   <Card.Text>
