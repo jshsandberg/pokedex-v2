@@ -1,0 +1,25 @@
+.card {
+    position: relative;
+    display: flex;
+    border: 1px solid;
+    border-radius: .25rem;
+    min-width: 0;
+    background-color:rgb(231, 231, 231);
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-img {
+    flex-shrink: 0;
+    width: 100;
+}
+
+.capitalize {
+    text-transform: capitalize;
+  }
+
+.card-text {
+    background-color: white;
+}

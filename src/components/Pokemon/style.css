@@ -1,0 +1,5 @@
+.card-container {
+    padding: 30px;
+    background: gray;
+    background-clip: padding-box;
+}
