@@ -4,9 +4,34 @@
     background-clip: padding-box;
 }
 
+.single-evolve-img {
+    width: 280px;
+    display: block;
+    float: right;
+}
+
+.single-evolve-text {
+    padding-top: 70px;
+    text-transform: capitalize;
+}
+
+.double-arrow-img {
+    width: 15%;
+    float: right;
+    position: absolute;
+    right: -45px;
+    top: 115px;
+    /* padding-top: 115px; */
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
 .evolve-img {
-    width: 300px;
+    width: 280px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
