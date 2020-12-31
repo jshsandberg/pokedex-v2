@@ -42,10 +42,8 @@ function Pokemon() {
             const beforeEvolution = location.state.evolutions.filter(x => !!x)
 
             const newEvolution = [...new Set(beforeEvolution)];
-
-
         
-            //console.log(newEvolution)
+            //console.log(newEvolution) Need to randomly pick a description for the pokemon
 
             if (typeof newEvolution[2] === 'string') {
 
@@ -89,7 +87,9 @@ function Pokemon() {
 
                 setEvolution(evolutions);
 
-            }            
+            }   
+            
+            console.log(location.state.ability.ability1.name)
 
         }
         await fetchData();
@@ -105,7 +105,8 @@ function Pokemon() {
         paddingRight: "0px",
         paddingLeft: "0px",
         paddingTop: "35px"
-    }
+    };
+
     
    if (isLoading) {
        return (
@@ -132,13 +133,36 @@ function Pokemon() {
                         </div>
                     </div>
                     <div style={{backgroundColor: "lightgray"}} className="col">
-                        <h6>{pokemonInfo.description}</h6>
+                        <br></br>
+                        <div>
+                            {pokemonInfo.description.length >=3 ? 
+                                pokemonInfo.description.map((item, i) => {
+                                    return (
+                                        <>
+                                            <h3 style={{fontSize: "20px"}}>{item}</h3>
+                                        </>
+                                    )
+                                })
+                                :
+                                pokemonInfo.description.map((item, i) => {
+                                    return (
+                                        <>
+                                            <h3>{item}</h3>
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
+                        <br></br>
                         <div style={{backgroundColor: "lightblue"}} className="container">
                             <div className="row">
                                 <div className="col">
                                     <h3>Weight: {pokemonInfo.weight}</h3>
                                     <br></br>
                                     <h3>Height: {pokemonInfo.height}</h3>
+                                </div>
+                                <div className="col">
+                                    <h3 className="capitalize">Abilities: {pokemonInfo.ability.ability1.name}</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,47 +196,56 @@ function Pokemon() {
                     </div>
                 </div>
                 <br></br>
-                {evolution.length === 1 ?
-                <div className="row">
-                    <div className="col">
-                        <img className="single-evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                {location.state.special_evolution === false ? 
+                <div>
+                    {evolution.length === 1 ?
+                    <div className="row">
+                        <div className="col">
+                            <img className="single-evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                        </div>
+                        <div className="col">
+                            <h4 className="single-evolve-text">{location.state.name}</h4><h4>does not evolve</h4>
+                        </div>
                     </div>
-                    <div className="col">
-                        <h4 className="single-evolve-text">{location.state.name}</h4><h4>does not evolve</h4>
+                    :
+                    evolution.length === 2 ?
+                    <div className="row">
+                        <div className="col">
+                            <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                            <img className="double-arrow-img" src={Arrow}></img>
+                        </div>
+                        <div className="col">
+                            <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
+                        </div>
                     </div>
+                    :
+                    evolution.length === 3 ?
+                    <div className="row">
+                        <div className="col">
+                            <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                            <img className="double-arrow-img" src={Arrow}></img>
+                        </div>
+                        <div className="col">    
+                            <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img> 
+                            <img className="double-arrow-img" src={Arrow}></img>
+                        </div>
+                        <div className="col">    
+                            <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img> 
+                        </div>
+                    </div>
+                    :
+                    evolution.length > 3 ?
+                    <div>
+                        <h1>hello</h1>
+                    </div>
+                    :
+                    <div></div>}
                 </div>
                 :
-                evolution.length === 2 ?
-                <div className="row">
-                    <div className="col">
-                        <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
-                        <img className="double-arrow-img" src={Arrow}></img>
-                    </div>
-                    <div className="col">
-                        <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
-                    </div>
+                <div>
+                    <h1>special Evolution</h1>
                 </div>
-                :
-                evolution.length === 3 ?
-                <div className="row">
-                    <div className="col">
-                        <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
-                        <img className="arrow-img" src={Arrow}></img>
-                    </div>
-                    <div className="col">    
-                        <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img> 
-                        <img className="arrow-img" src={Arrow}></img>
-                    </div>
-                    <div className="col">    
-                         <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img> 
-                    </div>
-                    <div className="col">    
-                         <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[3]}.png`} alt={evolution[3]}></img> 
-                    </div>
-                
-                </div>
-                :
-                <div></div>}
+                }
 
             </div>     
         </>
