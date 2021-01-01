@@ -50,11 +50,7 @@ function Galar() {
 
                     const evolutionResponse = await axios.get(response.data.evolution_chain.url);
 
-                    //console.log(evolutionResponse.data.chain)
-
-                    if (evolutionResponse.data.chain.evolves_to.length === 8) {
-                        console.log(evolutionResponse)
-                    }
+                    console.log(evolutionResponse.data.chain)
 
                     const chain = [
                                     evolutionResponse.data.chain.species.name, 
@@ -88,13 +84,15 @@ function Galar() {
 
                     const finalInfo = [...new Set(info)];
 
+
                     let skeletonPokemon = {
                         name: pokemon_entries[i].pokemon_species.name,
                         id: response.data.id.toString().length === 3 ? response.data.id : response.data.id.toString().length === 2 ? "0" + response.data.id : "00" + response.data.id,
                         height: feet + "'" + " " + inches + "''",
                         weight: pounds + " lb",
                         evolutions: chain,
-                        special_evolution: evolutionResponse.data.chain.evolves_to.length === 0 ? false : evolutionResponse.data.chain.evolves_to[0].evolves_to.length === 1 ? false : true,
+                        // Can not tell if a 4 evolution pokemon is special or not, could maybe do it in the pokemon component and check if the array has all unique elements then render them rather than checfk ehre
+                        special_evolution: evolutionResponse.data.chain.evolves_to.length === 0 ? false : evolutionResponse.data.chain.evolves_to.length === 1 ? false : evolutionResponse.data.chain.evolves_to[0].evolves_to.length === 1 ? false : true,
                         description: finalInfo,
                         stats: {
                                     hp: pokemonResponse.data.stats[0].base_stat,

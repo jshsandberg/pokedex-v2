@@ -134,8 +134,8 @@ function Pokemon() {
                 </div>
                 <div className="row">
                     <div style={{backgroundColor: "lightgray"}} className="col">
-                        <div className="card">
-                            <img className="card-img" src={`https://www.serebii.net/swordshield/pokemon/${pokemonInfo.id}.png`}></img>
+                        <div className="card-galar">
+                            <img className="card-img-galar" src={`https://www.serebii.net/swordshield/pokemon/${pokemonInfo.id}.png`}></img>
                         </div>
                     </div>
                     <div style={{backgroundColor: "lightgray"}} className="col">
@@ -191,7 +191,7 @@ function Pokemon() {
                         {evolution.length === 1 ?
                         <div className="row">
                             <div className="col">
-                                <img className="single-evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                                <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="single-evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
                             </div>
                             <div className="col">
                                 <h4 className="single-evolve-text">{location.state.name}</h4><h4>does not evolve</h4>
@@ -212,15 +212,15 @@ function Pokemon() {
                         evolution.length === 3 ?
                         <div className="row">
                             <div className="col">
-                                <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                                <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
                                 <img className="double-arrow-img" src={Arrow}></img>
                             </div>
                             <div className="col">    
-                                <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img> 
+                                <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img> 
                                 <img className="double-arrow-img" src={Arrow}></img>
                             </div>
                             <div className="col">    
-                                <img className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img> 
+                                <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="evolve-img" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img> 
                             </div>
                         </div>
                         :
@@ -231,50 +231,50 @@ function Pokemon() {
                     </div>
                 :
                 evolution.length === 3 ?
-                <div>
+                    <div>
                        <div className="row">
                             <div className="col">
-                                <img className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                                <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
                                 <img className="sp-arrow-top" src={Arrow}></img>
                                 <img className="sp-arrow-bottom" src={Arrow}></img>
                             </div>
                             <div className="col">
                                 <div className="row">
                                     <div className="col">
-                                        <img className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
+                                        <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
                                     </div>
                                 </div>
                                 <br></br>
                                 <br></br>
                                 <div className="row">
                                     <div className="col">
-                                        <img className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img>
+                                        <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                </div>
+                    </div>
                 :
                 <div>
                     <div className="row">
                         <div className="col">
-                            <img className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
+                            <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[0]}.png`} alt={evolution[0]}></img>
                             <img className="sp-arrow" src={Arrow}></img>
                         </div>
                         <div className="col">
-                            <img className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
+                            <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="sp-evl" src={`https://www.serebii.net/swordshield/pokemon/${evolution[1]}.png`} alt={evolution[1]}></img>
                             <img className="sp-arrow-top" src={Arrow}></img>
                             <img className="sp-arrow-bottom" src={Arrow}></img>
                         </div>
                         <div className="col">
                             <div className="row">
                                 <div className="col">
-                                    <img className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img>
+                                    <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[2]}.png`} alt={evolution[2]}></img>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
-                                    <img className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[3]}.png`} alt={evolution[3]}></img>
+                                    <img style={{borderRadius: "50%", border: "solid", backgroundColor: "white"}} className="double-spe-ev" src={`https://www.serebii.net/swordshield/pokemon/${evolution[3]}.png`} alt={evolution[3]}></img>
                                 </div>
                             </div>
                         </div> 

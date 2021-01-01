@@ -33,13 +33,16 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 50%;
+    border: "solid";
+    background-color: "white"
 }
 
 .sp-evl {
-    padding-top: 135px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 150px;
 }
 
 .sp-arrow-top {
