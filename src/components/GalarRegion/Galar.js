@@ -50,6 +50,12 @@ function Galar() {
 
                     const evolutionResponse = await axios.get(response.data.evolution_chain.url);
 
+                    //console.log(evolutionResponse.data.chain)
+
+                    if (evolutionResponse.data.chain.evolves_to.length === 8) {
+                        console.log(evolutionResponse)
+                    }
+
                     const chain = [
                                     evolutionResponse.data.chain.species.name, 
                                     evolutionResponse.data.chain.evolves_to[0] !== undefined ? evolutionResponse.data.chain.evolves_to[0].species.name : null, 
@@ -167,14 +173,21 @@ function Galar() {
                                 return (
                                     <>
                                         <div style={{backgroundColor: "white"}} className="col-3">
-                                            <div onClick={() => history.push({
-                                                pathname: `/pokemon/${galar.name}`, 
-                                                state: galar,
-                                                })
-                                                } className="card">
-                                                <img className="card-img" src={`https://www.serebii.net/swordshield/pokemon/${galar.id}.png`} alt={galar.id}></img>
+                                            <div onClick={() => { galar.evolutions[0] === "eevee" ?
+                                                    history.push({
+                                                        pathname: `/eevee/${galar.name}`, 
+                                                        state: galar,
+                                                        })
+                                                    :
+                                                    history.push({
+                                                        pathname: `/pokemon/${galar.name}`, 
+                                                        state: galar,
+                                                        })
+                                                }} 
+                                                className="card-galar">
+                                                <img className="card-img-galar" src={`https://www.serebii.net/swordshield/pokemon/${galar.id}.png`} alt={galar.id}></img>
                                             </div>
-                                            <div className="card-text">
+                                            <div className="card-text-galar">
                                                 <div className="row">
                                                     <div className="col-8">
                                                         <h4 style={{textAlign: "center"}} className="capitalize">{galar.name}</h4>

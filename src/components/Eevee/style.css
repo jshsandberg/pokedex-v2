@@ -1,0 +1,45 @@
+.card-container {
+    padding: 30px;
+    background: gray;
+    background-clip: padding-box;
+}
+
+.single-evolve-img {
+    width: 100%;
+    display: block;
+    float: right;
+}
+
+.single-evolve-text {
+    padding-top: 70px;
+    text-transform: capitalize;
+}
+
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+
+
+
+.sp-arrow-top {
+    width: 15%;
+    float: right;
+    position: absolute;
+    right: -45px;
+    top: 150px;
+}
+
+
+.eevee-evolve-img {
+    width: 125%;
+}
+
+.arrow-img {
+    width: 15%;
+    float: right;
+    position: absolute;
+    right: -90px;
+    top: 130px;
+}

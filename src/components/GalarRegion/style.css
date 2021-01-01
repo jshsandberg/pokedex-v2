@@ -1,4 +1,4 @@
-.card {
+.card-galar {
     position: relative;
     display: flex;
     border: 1px solid;
@@ -11,15 +11,16 @@
     margin-bottom: 15px;
 }
 
-.card-img {
+.card-img-galar {
     flex-shrink: 0;
-    width: 100;
+    width: 100%;
 }
 
 .capitalize {
     text-transform: capitalize;
   }
 
-.card-text {
+.card-text-galar {
     background-color: white;
 }
+
