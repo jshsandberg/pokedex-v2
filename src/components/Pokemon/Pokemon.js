@@ -36,8 +36,11 @@ function Pokemon() {
     const [evolution, setEvolution] = useState();
     const [pokemonInfo, setPokemonInfo] = useState();
     const [isLoading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect( async () => {
+
+        try{
 
         const fetchData = async () => {
 
@@ -102,6 +105,9 @@ function Pokemon() {
         await fetchData();
         await setPokemonInfo(location.state);
         await setLoading(false);
+    } catch (err) {
+        setError(true);
+    }
 
     }, []);
 
@@ -122,7 +128,15 @@ function Pokemon() {
                <h1>Loading...</h1>
            </div>
        )
-   } else {
+   } else if (error){
+       return (
+           <>
+                <h1>Looks like there was an error with the Pokemon API. CLick this button and it will go back to the home page and send an error report to the developer!</h1>
+                <button onClick={() => history.push({pathname: "/pokedex-v2"})}>Home</button>
+           </>
+       )
+   }
+   else {
     return (  
         <div style={{backgroundImage: `url(${Pokeballs})`}}>
             <div className="container card-container">

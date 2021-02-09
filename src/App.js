@@ -18,6 +18,7 @@ function App() {
     <div>
       <Router history={browserHistory} >
         <Route exact path="/" component={Galar}></Route>
+        <Route exact path="/pokedex-v2" component={Galar}></Route>
         <Route exact path="/pokemon/:pokemon" component={Pokemon}></Route>
         <Route exact path="/oddish/:pokemon" component={Oddish}></Route>
         <Route exact path="/tyrogue/:pokemon" component={Tyrogue}></Route>
