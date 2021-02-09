@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/pokedex-v2/static/css/main.09b50ae4.chunk.css",
+    "main.js": "/pokedex-v2/static/js/main.fa5f7679.chunk.js",
+    "main.js.map": "/pokedex-v2/static/js/main.fa5f7679.chunk.js.map",
+    "runtime-main.js": "/pokedex-v2/static/js/runtime-main.97915079.js",
+    "runtime-main.js.map": "/pokedex-v2/static/js/runtime-main.97915079.js.map",
+    "static/js/2.9b0df666.chunk.js": "/pokedex-v2/static/js/2.9b0df666.chunk.js",
+    "static/js/2.9b0df666.chunk.js.map": "/pokedex-v2/static/js/2.9b0df666.chunk.js.map",
+    "static/js/3.74eabe02.chunk.js": "/pokedex-v2/static/js/3.74eabe02.chunk.js",
+    "static/js/3.74eabe02.chunk.js.map": "/pokedex-v2/static/js/3.74eabe02.chunk.js.map",
+    "index.html": "/pokedex-v2/index.html",
+    "static/css/main.09b50ae4.chunk.css.map": "/pokedex-v2/static/css/main.09b50ae4.chunk.css.map",
+    "static/js/2.9b0df666.chunk.js.LICENSE.txt": "/pokedex-v2/static/js/2.9b0df666.chunk.js.LICENSE.txt",
+    "static/media/Alola.2e9e0975.png": "/pokedex-v2/static/media/Alola.2e9e0975.png",
+    "static/media/Arrow.c7a2ab29.svg": "/pokedex-v2/static/media/Arrow.c7a2ab29.svg",
+    "static/media/Bug.e88649d7.png": "/pokedex-v2/static/media/Bug.e88649d7.png",
+    "static/media/Dark.157159a3.png": "/pokedex-v2/static/media/Dark.157159a3.png",
+    "static/media/Dragon.9aa4a98a.png": "/pokedex-v2/static/media/Dragon.9aa4a98a.png",
+    "static/media/Fairy.64c537b8.png": "/pokedex-v2/static/media/Fairy.64c537b8.png",
+    "static/media/Galar.08a91d76.jpg": "/pokedex-v2/static/media/Galar.08a91d76.jpg",
+    "static/media/Galar.2cabe2ec.jpg": "/pokedex-v2/static/media/Galar.2cabe2ec.jpg",
+    "static/media/Ghost.e034817c.png": "/pokedex-v2/static/media/Ghost.e034817c.png",
+    "static/media/Hoenn.33bd2674.png": "/pokedex-v2/static/media/Hoenn.33bd2674.png",
+    "static/media/Ice.3b5c2d78.png": "/pokedex-v2/static/media/Ice.3b5c2d78.png",
+    "static/media/Johto.eb471eb1.png": "/pokedex-v2/static/media/Johto.eb471eb1.png",
+    "static/media/Kalos.7da1e916.png": "/pokedex-v2/static/media/Kalos.7da1e916.png",
+    "static/media/Kanto.fe0c9c4d.jpg": "/pokedex-v2/static/media/Kanto.fe0c9c4d.jpg",
+    "static/media/Normal.e4ce3695.png": "/pokedex-v2/static/media/Normal.e4ce3695.png",
+    "static/media/Poison.65973cfe.png": "/pokedex-v2/static/media/Poison.65973cfe.png",
+    "static/media/Pokeballs.5fb00a83.jpg": "/pokedex-v2/static/media/Pokeballs.5fb00a83.jpg",
+    "static/media/Psychic.e4714517.png": "/pokedex-v2/static/media/Psychic.e4714517.png",
+    "static/media/Sinnoh.56c1c940.jpg": "/pokedex-v2/static/media/Sinnoh.56c1c940.jpg",
+    "static/media/Steel.83ff0654.png": "/pokedex-v2/static/media/Steel.83ff0654.png",
+    "static/media/Unova.a0d97328.png": "/pokedex-v2/static/media/Unova.a0d97328.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97915079.js",
+    "static/js/2.9b0df666.chunk.js",
+    "static/css/main.09b50ae4.chunk.css",
+    "static/js/main.fa5f7679.chunk.js"
+  ]
+}
