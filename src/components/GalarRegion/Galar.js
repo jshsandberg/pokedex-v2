@@ -176,8 +176,32 @@ function Galar() {
                                                         pathname: `/eevee/${galar.name}`, 
                                                         state: galar,
                                                         })
-                                                    :
+                                                    : galar.evolutions[0] === "oddish" ?
                                                     history.push({
+                                                        pathname: `/oddish/${galar.name}`,
+                                                        state: galar,
+                                                    })
+                                                    : galar.evolutions[0] === "tyrogue" ?
+                                                    history.push({
+                                                        pathname: `/tyrogue/${galar.name}`,
+                                                        state: galar,
+                                                    })
+                                                    : galar.evolutions[0] === "ralts" ?
+                                                    history.push({
+                                                        pathname: `/ralts/${galar.name}`,
+                                                        state: galar,
+                                                    })
+                                                    : galar.evolutions[0] === "zacian" ?
+                                                    history.push({
+                                                        pathname: `/zacian/${galar.name}`,
+                                                        state: galar,
+                                                    })
+                                                    : galar.evolutions[0] === "zamazenta" ?
+                                                    history.push({
+                                                        pathname: `/zamazenta/${galar.name}`,
+                                                        state: galar,
+                                                    })
+                                                    : history.push({
                                                         pathname: `/pokemon/${galar.name}`, 
                                                         state: galar,
                                                         })

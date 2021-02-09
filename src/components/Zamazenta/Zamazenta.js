@@ -24,7 +24,8 @@ import Arrow from "../../utils/Extra/Arrow.svg";
 import axios from "axios";
 import Pokeballs from "../../utils/Background/Pokeballs.jpg";
 
-function Pokemon() {
+
+function Zamazenta() {
 
     const pokemon = useParams();
 
@@ -39,69 +40,75 @@ function Pokemon() {
 
     useEffect( async () => {
 
-        const fetchData = async () => {
+        try {
 
-            const beforeEvolution = await location.state.evolutions.filter(x => !!x)
+            const fetchData = async () => {
 
-            const newEvolution = await [...new Set(beforeEvolution)];
-        
-            const random = await location.state.description;
+                const beforeEvolution = await location.state.evolutions.filter(x => !!x)
 
-            const randomNumber = await Math.floor(Math.random() * random.length);
-
-            const defined = await random[randomNumber]
-
-            setDescription(defined)
-
-            if (typeof newEvolution[2] === 'string') {
-
-                const evolutions = [];
-
-                for (let i = 0; i < newEvolution.length; i++) {
-                    
-                    const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${newEvolution[i]}/`)
-    
-                    const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
-                    evolutions.push(id);
-                }
-
-                setEvolution(evolutions);
-
-            } else if (newEvolution.length === 2) {
-
-                const evolutions = [];
-
-                for (let i = 0; i < newEvolution.length; i++) {
-                    
-                    const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${newEvolution[i]}/`)
-    
-                    const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
-                    evolutions.push(id);
-                }
-
-                setEvolution(evolutions);
-
-            } else if (newEvolution.length === 1) {
-                
-                const evolutions = [];
-
-                for (let i = 0; i < newEvolution.length; i++) {
-                    
-                    const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${newEvolution[i]}/`)
-    
-                    const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
-                    evolutions.push(id);
-                }
-
-                setEvolution(evolutions);
-
-            }   
+                const newEvolution = await [...new Set(beforeEvolution)];
             
+                const random = await location.state.description;
 
+                const randomNumber = await Math.floor(Math.random() * random.length);
+
+                const defined = await random[randomNumber]
+
+                setDescription(defined)
+
+                if (typeof newEvolution[2] === 'string') {
+
+                    const evolutions = [];
+
+                    for (let i = 0; i < newEvolution.length; i++) {
+                        
+                        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/zamazenta-hero/`)
+        
+                        const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
+                        evolutions.push(id);
+                    }
+
+                    setEvolution(evolutions);
+
+                } else if (newEvolution.length === 2) {
+
+                    const evolutions = [];
+
+                    for (let i = 0; i < newEvolution.length; i++) {
+                        
+                        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/zamazenta-hero/`)
+        
+                        const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
+                        evolutions.push(id);
+                    }
+
+                    setEvolution(evolutions);
+
+                } else if (newEvolution.length === 1) {
+                    
+                    const evolutions = [];
+
+                    for (let i = 0; i < newEvolution.length; i++) {
+                        
+                        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/zamazenta-hero/`)
+        
+                        const id = data.id.toString().length === 3 ? data.id : data.id.toString().length === 2 ? "0" + data.id : "00" + data.id;
+                        evolutions.push(id);
+                    }
+
+                    setEvolution(evolutions);
+
+                }   
+                
+
+            }
+            await fetchData();
+            await setPokemonInfo(location.state);
+            await setLoading(false);
+        } catch (err) {
+            console.log(err)
         }
-        await fetchData();
-        await setPokemonInfo(location.state);
-        await setLoading(false);
+     
 
     }, []);
 
@@ -285,9 +292,9 @@ function Pokemon() {
                 }
 
             </div>     
-        </div>
+            </div>
     )
    }
 }
 
-export default Pokemon
+export default Zamazenta
