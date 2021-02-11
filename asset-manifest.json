@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/pokedex-v2/static/css/main.09b50ae4.chunk.css",
-    "main.js": "/pokedex-v2/static/js/main.134ef93f.chunk.js",
-    "main.js.map": "/pokedex-v2/static/js/main.134ef93f.chunk.js.map",
-    "runtime-main.js": "/pokedex-v2/static/js/runtime-main.97915079.js",
-    "runtime-main.js.map": "/pokedex-v2/static/js/runtime-main.97915079.js.map",
-    "static/js/2.9b0df666.chunk.js": "/pokedex-v2/static/js/2.9b0df666.chunk.js",
-    "static/js/2.9b0df666.chunk.js.map": "/pokedex-v2/static/js/2.9b0df666.chunk.js.map",
-    "static/js/3.74eabe02.chunk.js": "/pokedex-v2/static/js/3.74eabe02.chunk.js",
-    "static/js/3.74eabe02.chunk.js.map": "/pokedex-v2/static/js/3.74eabe02.chunk.js.map",
+    "main.js": "/pokedex-v2/static/js/main.55e71385.chunk.js",
+    "main.js.map": "/pokedex-v2/static/js/main.55e71385.chunk.js.map",
+    "runtime-main.js": "/pokedex-v2/static/js/runtime-main.fe51ee0a.js",
+    "runtime-main.js.map": "/pokedex-v2/static/js/runtime-main.fe51ee0a.js.map",
+    "static/js/2.a2bf0638.chunk.js": "/pokedex-v2/static/js/2.a2bf0638.chunk.js",
+    "static/js/2.a2bf0638.chunk.js.map": "/pokedex-v2/static/js/2.a2bf0638.chunk.js.map",
+    "static/js/3.cc5cbb8a.chunk.js": "/pokedex-v2/static/js/3.cc5cbb8a.chunk.js",
+    "static/js/3.cc5cbb8a.chunk.js.map": "/pokedex-v2/static/js/3.cc5cbb8a.chunk.js.map",
     "index.html": "/pokedex-v2/index.html",
     "static/css/main.09b50ae4.chunk.css.map": "/pokedex-v2/static/css/main.09b50ae4.chunk.css.map",
-    "static/js/2.9b0df666.chunk.js.LICENSE.txt": "/pokedex-v2/static/js/2.9b0df666.chunk.js.LICENSE.txt",
+    "static/js/2.a2bf0638.chunk.js.LICENSE.txt": "/pokedex-v2/static/js/2.a2bf0638.chunk.js.LICENSE.txt",
     "static/media/Alola.2e9e0975.png": "/pokedex-v2/static/media/Alola.2e9e0975.png",
     "static/media/Arrow.c7a2ab29.svg": "/pokedex-v2/static/media/Arrow.c7a2ab29.svg",
     "static/media/Bug.e88649d7.png": "/pokedex-v2/static/media/Bug.e88649d7.png",
@@ -35,9 +35,9 @@
     "static/media/Unova.a0d97328.png": "/pokedex-v2/static/media/Unova.a0d97328.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.97915079.js",
-    "static/js/2.9b0df666.chunk.js",
+    "static/js/runtime-main.fe51ee0a.js",
+    "static/js/2.a2bf0638.chunk.js",
     "static/css/main.09b50ae4.chunk.css",
-    "static/js/main.134ef93f.chunk.js"
+    "static/js/main.55e71385.chunk.js"
   ]
 }
