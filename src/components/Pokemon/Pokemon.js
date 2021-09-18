@@ -122,18 +122,19 @@ function Pokemon() {
     };
 
     
-   if (isLoading) {
+   if (error) {
        return (
-           <div>
-               <h1>Loading...</h1>
-           </div>
+        <>
+        <h1>Looks like there was an error with the Pokemon API. CLick this button and it will go back to the home page and send an error report to the developer!</h1>
+        <button onClick={() => history.push({pathname: "/pokedex-v2"})}>Home</button>
+   </>
+     
        )
-   } else if (error){
+   } else if (isLoading){
        return (
-           <>
-                <h1>Looks like there was an error with the Pokemon API. CLick this button and it will go back to the home page and send an error report to the developer!</h1>
-                <button onClick={() => history.push({pathname: "/pokedex-v2"})}>Home</button>
-           </>
+        <div>
+        <h1>Loading...</h1>
+    </div>
        )
    }
    else {

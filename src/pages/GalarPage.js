@@ -1,11 +1,13 @@
 import React from "react";
-import GalarHolder from "../components/GalarRegion/Galar";
+import Galar from "../components/GalarRegion/Galar";
+import Alert from "../components/Alert/Alert";
 
 function GalarPage() {
 
     return (
         <>
-            <GalarHolder></GalarHolder>
+         
+            <Galar></Galar>
         </>
     )
 }

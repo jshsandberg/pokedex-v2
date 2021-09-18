@@ -20,6 +20,8 @@ import Dark from "../../utils/Types/Dark.png";
 import Electric from "../../utils/Types/Electric.png";
 import Psychic from "../../utils/Types/Psychic.png";
 import Bug from "../../utils/Types/Bug.png";
+import Alert from "../Alert/Alert";
+
 
 import "../GalarRegion/style.css"
 
@@ -44,6 +46,7 @@ function Galar() {
 
                 for (let i = 0; i < pokemon_entries.length; i++) {
 
+                    if (i !== 171){
                     const response = await axios.get(pokemon_entries[i].pokemon_species.url);
 
                     const pokemonResponse = await axios.get(response.data.varieties[0].pokemon.url);
@@ -119,9 +122,10 @@ function Galar() {
                     }
 
                     galarPokemon.push(skeletonPokemon);
-                    console.log(skeletonPokemon)
+                    console.log(skeletonPokemon, i)
                     
                 }
+            }
 
 
                 setPokemon(galarPokemon)
@@ -146,8 +150,9 @@ function Galar() {
 
    if (isLoading) {
        return (
-                <div>
-                    <h1>LOADING...</h1>
+                <div>   
+                    <Alert />
+                    <h1>LOADING...this may take a few minutes (Check the console to see all the data being collected!)</h1>
                 </div>
             ) 
    } else {
@@ -155,6 +160,7 @@ function Galar() {
     return (
         <>      
             <div style={ background }>
+                <Alert />
                 <div className="container">
                     <div className="row">
                         <div className="col">
